@@ -23,6 +23,7 @@
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style1.css" />
     <link rel="stylesheet" href="/assets/css/portfolio.css">
@@ -35,15 +36,13 @@
 <body>
     <header>
         <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
-            <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Abdullah Al Fahad, Ph.D. </span></a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Abdullah Al Fahad, Ph.D.</span></a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button>
                 <div class="collapse navbar-collapse text-right" id="navbarNav">
                     <ul class="navbar-nav ml-auto flex-nowrap">
                         <li class="nav-item "> <a class="nav-link" href="/">Home</a> </li>
                         <li class="nav-item "> <a class="nav-link" href="/research/">Research</a> </li>
-                        <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a> </li>  
+                        <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a> </li>
                         <li class="nav-item "> <a class="nav-link" href="/climbuntu/">ClimBuntu</a> </li>
-<!--                         <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fas fa-moon"></i> <i class="fas fa-sun"></i> </button> </li> -->
                         <li class="nav-button">
                             <div id='button'>
                                 <button type="button" class="button-40" id="form-open">Log in</button> 
@@ -57,6 +56,21 @@
     </header>
     
 <!-- here  -->
+
+<!-- pf hero (additive; login untouched) -->
+    <section class="pf-hero pf-hero-sm" style="margin:0.8rem 1.5rem 1.2rem;">
+        <canvas class="pf-flowfield" data-density="0.9"></canvas>
+        <div class="pf-hero-content">
+            <h1>Climate Data Science &amp; Modeling</h1>
+            <p class="pf-tagline">A free, hands-on curriculum: from your first Python notebook to running WRF and MITgcm — with real climate data at every step.</p>
+            <div class="pf-hero-chips">
+                <span class="pf-chip">Python &amp; Xarray</span>
+                <span class="pf-chip">Statistics &amp; ML</span>
+                <span class="pf-chip">GIS &amp; Earth Engine</span>
+                <span class="pf-chip">WRF · MITgcm · SPEEDY</span>
+            </div>
+        </div>
+    </section>
 
 <!-- Section 2: Description of Tutorial -->
     <section id="section1">
@@ -455,6 +469,7 @@
     </script>
 
 
+    <script defer src="/assets/js/flowfield.js"></script>
 </body>
 
 </html>

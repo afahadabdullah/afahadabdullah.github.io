@@ -47,9 +47,6 @@
                 </div>
             </div>
         </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header>
-
-        
-    </header>
 <!--     <div class="container mt-5">
         <div class="post">
             <header class="post-header">
@@ -59,8 +56,33 @@
 
 
     <main>
-        <section id="cover-photo">
-            ClimBuntu OS
+        <section class="pf-hero pf-hero-sm" style="margin:1rem 1.5rem 1.5rem;">
+            <canvas class="pf-flowfield" data-density="0.9"></canvas>
+            <div class="pf-hero-content">
+                <h1>ClimBuntu OS</h1>
+                <p class="pf-tagline">A free Linux distribution for climate science — numerical climate models, geospatial tools, and the scientific Python stack, preinstalled and ready to run.</p>
+                <div class="pf-hero-chips">
+                    <span class="pf-chip">Ubuntu-based</span>
+                    <span class="pf-chip">WRF &amp; MITgcm inside</span>
+                    <span class="pf-chip">QGIS · Python · R</span>
+                    <span class="pf-chip">Free &amp; open</span>
+                </div>
+            </div>
+        </section>
+
+        <section style="max-width:900px;margin:0 auto 2rem;padding:0 1.5rem;">
+            <div class="pf-terminal">
+                <div class="pf-terminal-bar"><span class="r"></span><span class="y"></span><span class="g"></span><em>fahad@climbuntu: ~/research</em></div>
+                <div class="pf-terminal-body">
+<span class="p">$</span> <span class="k">climbuntu</span> --list-models<br>
+<span class="ok">✓</span> WRF &nbsp;<span class="c"># regional atmosphere</span><br>
+<span class="ok">✓</span> MITgcm &nbsp;<span class="c"># ocean circulation</span><br>
+<span class="ok">✓</span> SPEEDY &nbsp;<span class="c"># fast global atmosphere</span><br>
+<span class="p">$</span> <span class="k">python</span> plot_enso.py --data ERA5 --index nino34<br>
+<span class="c">[xarray] loading sst.nc … done. plotting Niño-3.4 …</span><br>
+<span class="p">$</span> <span class="pf-cursor"></span>
+                </div>
+            </div>
         </section>
 
         <section class="about-section">
@@ -91,32 +113,18 @@
         </section>
 
 
-        <section class="features">
-            <h2>Features of ClimBuntu</h2>
-            <ul>
-                <li>Pre-installed climate research software</li>
-                <li>Pre-installed numerical climate models</li>
-                <li>Pre-installed libraries for climate research</li>
-                <li>Easy-to-use interface</li>
-                <li>Regular updates and security patches</li>
-                <li>Open source software</li>
-            </ul>
-        </section>
-
-        <section class="climate-software">
-            <h2>List of pre-installed Climate models & Software</h2>
-            <ul>
-                <li>WRF atmospheric model</li>
-                <li>MITgcm Ocean model</li>
-                <li>Speedy atmospheric model</li>            
-                <li>QGIS and QGRASS</li>
-                <li>ipython</li>
-                <li>R</li>
-                <li>Miniconda</li>
-                <li>GRAds</li>
-                <li>Jupyter notebook</li>
-                <li>Sublime Text</li>
-            </ul>
+        <section style="max-width:1000px;margin:0 auto 2rem;padding:0 1.5rem;">
+            <h2 class="pf-section-heading">Why ClimBuntu</h2>
+            <div class="pf-grid pf-grid-4" style="margin-bottom:2rem;">
+                <div class="pf-feature"><span class="pf-feature-ico">📦</span><div><strong>Everything preinstalled</strong> — climate models, libraries, and analysis software, configured to work together out of the box.</div></div>
+                <div class="pf-feature"><span class="pf-feature-ico">🖱</span><div><strong>Easy to use</strong> — friendly for newcomers to Linux or climate software; no compiler battles on day one.</div></div>
+                <div class="pf-feature"><span class="pf-feature-ico">🔐</span><div><strong>Maintained &amp; open</strong> — regular updates and security patches on a fully open-source stack.</div></div>
+                <div class="pf-feature"><span class="pf-feature-ico">🎓</span><div><strong>Built for research &amp; teaching</strong> — ideal for students, labs, and agencies doing climate analysis.</div></div>
+            </div>
+            <h2 class="pf-section-heading">Preinstalled models &amp; software</h2>
+            <div>
+                <span class="pf-skill">WRF atmospheric model</span><span class="pf-skill">MITgcm ocean model</span><span class="pf-skill">SPEEDY atmospheric model</span><span class="pf-skill">QGIS &amp; QGRASS</span><span class="pf-skill">Miniconda</span><span class="pf-skill">Jupyter Notebook</span><span class="pf-skill">IPython</span><span class="pf-skill">R</span><span class="pf-skill">GrADS</span><span class="pf-skill">Sublime Text</span>
+            </div>
         </section>
 
         <section class="libraries">
@@ -221,6 +229,7 @@
             setTimeout(progressBarSetup, 50)
         };
     </script>
+    <script defer src="/assets/js/flowfield.js"></script>
 </body>
 
 </html>

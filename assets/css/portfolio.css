@@ -368,3 +368,96 @@ a.pf-plain { text-decoration: none; color: inherit; }
   .pf-hero h1 { font-size: 2rem; }
   .pf-spectrum-wrap { padding: 1.4rem 1rem 1rem; }
 }
+
+/* ---------- v2: skills chips ---------- */
+.pf-skillgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; }
+.pf-skillcat {
+  border-radius: var(--pf-radius);
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color, var(--global-bg-color));
+  box-shadow: var(--pf-shadow);
+  padding: 1.15rem 1.2rem 0.95rem;
+}
+.pf-skillcat h4 {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  color: var(--global-text-color-light);
+}
+.pf-skillcat h4 .pf-skillcat-ico { margin-right: 0.4rem; }
+.pf-skill {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.26rem 0.68rem;
+  margin: 0 0.3rem 0.42rem 0;
+  border-radius: 999px;
+  color: var(--global-text-color);
+  background: rgba(30, 100, 200, 0.08);
+  border: 1px solid rgba(30, 100, 200, 0.22);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.pf-skill:hover { transform: translateY(-1px); background: rgba(23, 179, 166, 0.14); border-color: rgba(23, 179, 166, 0.4); }
+html[data-theme="dark"] .pf-skill { background: rgba(90, 150, 240, 0.12); border-color: rgba(90, 150, 240, 0.3); }
+
+/* ---------- v2: compact hero for sub-pages ---------- */
+.pf-hero-sm { padding: 3rem 1.6rem 2.8rem; }
+.pf-hero-sm h1 { font-size: 2.1rem; }
+.pf-hero-sm p.pf-tagline { font-size: 1.02rem; margin-bottom: 1rem; }
+
+/* ---------- v2: terminal window (ClimBuntu) ---------- */
+.pf-terminal {
+  max-width: 640px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--pf-shadow-hover);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.82rem;
+  text-align: left;
+}
+.pf-terminal-bar {
+  background: #2d2d3a;
+  padding: 0.55rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.pf-terminal-bar span { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.pf-terminal-bar .r { background: #ff5f57; } .pf-terminal-bar .y { background: #febc2e; } .pf-terminal-bar .g { background: #28c840; }
+.pf-terminal-bar em { font-style: normal; color: #9aa0b0; font-size: 0.72rem; margin-left: 0.6rem; }
+.pf-terminal-body { background: #14141d; color: #d6e2f0; padding: 1rem 1.1rem 1.2rem; line-height: 1.85; }
+.pf-terminal-body .p  { color: #28c840; font-weight: 700; }
+.pf-terminal-body .c  { color: #7f8ea3; }
+.pf-terminal-body .k  { color: #66c7ff; }
+.pf-terminal-body .ok { color: #ffd479; }
+.pf-cursor { display: inline-block; width: 8px; height: 14px; background: #d6e2f0; vertical-align: middle; animation: pf-blink 1.1s steps(1) infinite; }
+@keyframes pf-blink { 50% { opacity: 0; } }
+
+/* ---------- v2: wave divider ---------- */
+.pf-wave { display: block; width: 100%; height: 46px; margin: -0.4rem 0 1.6rem; }
+.pf-wave path { fill: rgba(30, 100, 200, 0.10); }
+html[data-theme="dark"] .pf-wave path { fill: rgba(90, 150, 240, 0.10); }
+
+/* ---------- v2: feature list cards (ClimBuntu) ---------- */
+.pf-feature {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color, var(--global-bg-color));
+  box-shadow: var(--pf-shadow);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.pf-feature .pf-feature-ico { font-size: 1.25rem; line-height: 1.2; }
+
+/* ---------- v2: collapsible publications ---------- */
+.pf-pub-collapse { display: none; }
+.pf-pub-collapse.is-expanded { display: block; }
+.pf-pub-collapse h4, .pf-publist h4 { font-weight: 700; margin: 1.6rem 0 0.4rem; font-size: 1.05rem; color: var(--global-text-color); }
