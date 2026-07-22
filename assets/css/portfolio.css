@@ -588,3 +588,33 @@ body.fixed-top-nav { padding-top: 56px; }
 /* dual-identity chips in the hero */
 .pf-chip-research { background: rgba(59, 130, 246, 0.28); border-color: rgba(59, 130, 246, 0.6); }
 .pf-chip-dev { background: rgba(23, 179, 166, 0.28); border-color: rgba(23, 179, 166, 0.6); }
+
+/* ============================================================
+   v7: DETERMINISTIC navbar geometry — identical on every page,
+   neutralizes blog nav{padding} & climbuntu body insets.
+   ============================================================ */
+#navbar.navbar {
+  position: fixed !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  width: 100% !important;
+  height: 56px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1030;
+}
+#navbar.navbar > .container {
+  max-width: 1140px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 15px !important;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================================
+   v8: eliminate cross-page navbar shift caused by the vertical
+   scrollbar appearing on some pages and not others. Always
+   reserve the scrollbar gutter so centered layout never jumps.
+   ============================================================ */
+html { overflow-y: scroll; scrollbar-gutter: stable; }
