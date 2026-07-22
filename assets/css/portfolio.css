@@ -511,3 +511,65 @@ body.fixed-top-nav { padding-top: 56px; }
 .pf-pillars-stack .pf-mini-pillar { margin-bottom: 0; }
 .pf-pillars-stack { display: grid; grid-template-columns: 1fr; gap: 0.8rem; }
 @media (min-width: 480px) and (max-width: 900px) { .pf-pillars-stack { grid-template-columns: 1fr 1fr; } }
+
+/* ============================================================
+   v4: uniform navbar height + shorter home + compact blog hero
+   ============================================================ */
+/* hard-lock the bar height on every page */
+#navbar.navbar { height: 56px !important; min-height: 56px; overflow: visible; }
+#navbar.navbar .container { height: 100%; display: flex; align-items: center; }
+#navbar.navbar .navbar-collapse { flex-grow: 1; }
+/* compact login button inside the bar (blog) */
+#navbar.navbar .button-40 {
+  padding: 4px 12px !important;
+  font-size: 0.82rem !important;
+  line-height: 1.4 !important;
+  border-radius: 999px;
+}
+@media (max-width: 575px) { #navbar.navbar { height: auto !important; } }
+
+/* tighter mini pillars → shorter home page */
+.pf-pillars-stack { gap: 0.55rem; }
+.pf-tworow .pf-mini-pillar { padding: 0.7rem 0.9rem; }
+.pf-tworow .pf-mini-pillar .pf-mini-icon { font-size: 1.05rem; margin-bottom: 0.2rem; }
+.pf-tworow .pf-mini-pillar h4 { font-size: 0.88rem; margin-bottom: 0.15rem; }
+.pf-tworow .pf-mini-pillar p { font-size: 0.76rem; line-height: 1.45; }
+.pf-tworow .pf-skillcat { padding: 0.75rem 0.9rem 0.5rem; }
+.pf-tworow .pf-skillgrid.pf-compact { gap: 0.55rem; }
+.pf-tworow .pf-cta-row { margin-top: 0.9rem; }
+.pf-tworow .pf-btn { font-size: 0.82rem; padding: 0.45rem 1.05rem; }
+
+/* extra-compact hero (blog) */
+.pf-hero-xs { padding: 1.9rem 1.4rem 1.7rem; }
+.pf-hero-xs h1 { font-size: 1.65rem; margin-bottom: 0.45rem; }
+.pf-hero-xs p.pf-tagline { font-size: 0.92rem; line-height: 1.55; margin-bottom: 0.8rem; }
+.pf-hero-xs .pf-chip { font-size: 0.68rem; padding: 0.24rem 0.65rem; }
+
+/* ============================================================
+   v5: print/tablet-resilient layout + FA icons + color harmony
+   ============================================================ */
+/* tworow collapses in step with bootstrap md columns */
+@media (max-width: 991px) { .pf-tworow { grid-template-columns: 1fr; } }
+@media (min-width: 480px) and (max-width: 991px) { .pf-pillars-stack { grid-template-columns: 1fr 1fr; } }
+
+/* FontAwesome icon styling for category headers & pillars */
+.pf-skillcat h4 .pf-skillcat-ico i { color: var(--pf-accent); font-size: 0.85rem; }
+.pf-mini-icon i { color: var(--pf-accent); font-size: 1.05rem; }
+.pf-card-icon i { font-size: 1.15rem; }
+
+/* View CV button + social circles: match the blue-teal accent, not al-folio purple */
+.btn-cv, a.btn-cv {
+  background: linear-gradient(90deg, var(--pf-accent), var(--pf-accent-2)) !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 999px !important;
+}
+.profile-card .social-link, .social-links .social-link {
+  color: var(--pf-accent) !important;
+  border-color: rgba(30, 100, 200, 0.35) !important;
+}
+.profile-card .social-link:hover, .social-links .social-link:hover {
+  background: var(--pf-accent) !important;
+  color: #fff !important;
+}
