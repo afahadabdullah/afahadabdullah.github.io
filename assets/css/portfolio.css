@@ -573,3 +573,18 @@ body.fixed-top-nav { padding-top: 56px; }
   background: var(--pf-accent) !important;
   color: #fff !important;
 }
+
+/* ============================================================
+   v6: R&D dual theming — research (blue) vs development (teal)
+   ============================================================ */
+.pf-sec-research .pf-section-title { color: var(--pf-dyn); letter-spacing: 0.18em; }
+.pf-sec-research .pf-section-heading::after { background: linear-gradient(90deg, var(--pf-dyn), var(--pf-hyb)); }
+.pf-sec-research .pf-card { border-top: 3px solid rgba(59, 130, 246, 0.55); }
+
+.pf-sec-dev .pf-section-title { color: var(--pf-accent-2); letter-spacing: 0.18em; }
+.pf-sec-dev .pf-section-heading::after { background: linear-gradient(90deg, var(--pf-accent-2), var(--pf-ml)); }
+.pf-sec-dev .pf-card { border-top: 3px solid rgba(23, 179, 166, 0.55); }
+
+/* dual-identity chips in the hero */
+.pf-chip-research { background: rgba(59, 130, 246, 0.28); border-color: rgba(59, 130, 246, 0.6); }
+.pf-chip-dev { background: rgba(23, 179, 166, 0.28); border-color: rgba(23, 179, 166, 0.6); }
