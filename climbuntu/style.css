@@ -1,0 +1,216 @@
+
+section {
+    margin: 0 12%; /* add margin */
+}
+
+#cover-photo {
+    background-image: url('https://wallpapercave.com/wp/wp7477586.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3.5em;
+    text-align: justify;
+    text-shadow: 2px 2px #000;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.about-section {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    margin-bottom: 30px;
+}
+
+.about-text {
+    flex: 1; /* Expand to fill available space */
+
+    text-align: justify;
+}
+
+#climbuntu img {
+    max-width: 750px;
+    width: 96%;
+    margin: 2%;
+}
+
+@media screen and (max-width: 1500px) {
+    #climbuntu {
+        width: 55%;
+        margin: 0 auto;
+    }
+    .about-section {
+        display: flex;
+        align-items: center; /* Vertically center items */
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #climbuntu {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .about-section {
+        display: block;
+        align-items: center; /* Vertically center items */
+    }
+}
+
+#earth {
+    animation: rotate 10s linear infinite;
+    transform-origin: center center;
+    width: 180px;
+    height: 180px;
+    background-image: url('https://media.istockphoto.com/id/1314700921/vector/earth-globe-north-pole-view.jpg?s=612x612&w=0&k=20&c=Bqe9onFEo5nTU9KbsNIDMfUCjd9uiW1KDKEBWmJ-BJM=');
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.about-text {
+    flex: 1; /* Expand to fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.download-container div{
+    width: 32%;
+    display: block;
+    margin: auto;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 5px;
+    background-color: #3b78b9;
+    color: #fff;
+/*    text-decoration: none;*/
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.disabled {
+    pointer-events: none;
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+    /* Adjust layout for screens with a width of 768px or less */
+    body {
+        margin: 0;
+    }
+
+    .download-container {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .button-container {
+        text-align: center;
+    }
+    .download-container div{
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+}
+
+/* Add more media queries as needed for other screen sizes */
+
+
+/* Common styles for all sections */
+
+.features,
+.climate-software,
+.libraries,
+.system-requirements,
+.get-involved {
+    background-color: #8fb5db4f;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.features h2,
+.climate-software h2,
+.libraries h2,
+.system-requirements h2,
+.get-involved h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Adjustments for specific sections */
+
+.get-involved {
+    background-color: #EAECEE4f;
+}
+
+.github-button {
+    background-color: #3b78b9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.github-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}

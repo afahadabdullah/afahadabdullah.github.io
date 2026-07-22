@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OS Installation Tutorial</title>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <meta name="viewport" content="width=1024">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ClimBuntu Tutorial | Abdullah Al Fahad, Ph.D. </title>
+  <meta name="author" content="Abdullah Al Fahad, Ph.D. ">
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. ">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light"> -->
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <link rel="canonical" href="https://afahadabdullah.github.io/blog/">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <!-- Unicons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark"> -->
+  <script src="/assets/js/theme.js"></script>
+  <script src="/assets/js/dark_mode.js"></script>
+  <!-- <link rel="stylesheet" href="style1.css" /> -->
+
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+            <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Abdullah Al Fahad, Ph.D. </span></a>
+              <span>| |</span>
+                <div class="nav-items"><div class="collapse navbar-collapse text-right" id="navbarNav navbar-item">
+                    <ul class="navbar-nav ml-auto flex-nowrap nav">
+                        <li class="nav-item "> <a class="nav-link" href="/">Home</a> </li>
+                        <li class="nav-item "> <a class="nav-link" href="/research/">Research</a> </li>
+                        <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a> </li>  
+                        <li class="nav-item "> <a class="nav-link" href="/climbuntu/">ClimBuntu</a> </li>
+
+                    </ul>
+                    
+                </div></div>
+            </div>
+    </header>
+  <main>
+    <div class="sidebar">
+      <ul id='steps'>
+        <li class="step" id="step-1" onclick="showDescription(1)">Download the ISO file</li>
+        <li class="step" id="step-2" onclick="showDescription(2)">Create a bootable USB media</li>
+        <li class="step" id="step-3" onclick="showDescription(3)">Installation process.</li>
+        <li class="step" id="step-4" onclick="showDescription(4)">Boot Priority (for Dual boot user)</li>
+        <li class="step" id="step-5" onclick="showDescription(5)">Reboot</li>
+      </ul>
+    <div class="home-button"><button id="backButton"><i class="fas fa-arrow-left"></i>Previous page</button></div>
+    </div>
+    <div id="description-box">
+      <div id="description-content">
+      <div class="divider"></div>
+        <div id="step-1-description">
+          <p> 1. Go to <a href="https://afahadabdullah.github.io/climbuntu/" class="custom-link">ClimBuntu OS</a> download page.</p>
+          <img src="./images/step_1/01.png" alt="Image" width="90%">
+          <p>2. Click on the Download ClimBuntuV0.1 button.</p>
+          <p>3. You will be forwarded to a Google Form for registration.</p>
+          <img src="./images/step_1/02.png" alt="Image" width="90%">
+          <p>4. Enter your credentials and submit.</p>
+          <img src="./images/step_1/03.png" alt="Image" width="90%">
+          <p>5. Successful submission will provide a Google Drive link containing the ClimBuntu.iso file. Download the file on your device.</p>
+        </div>
+
+        <div id="step-2-description">
+          <p>Before start the process of creating Bootable USB, you need to know the <b>Partition Table Scheme</b> of your Storage or Hard Dirve. That will be either <b>GPT</b> or <b>MBR</b>. To find this in Windows OS, search <b>cmd</b> in your windows search bar and <b>Run as administrator.</b></p>
+
+          <p>After opening <b>cmd</b>, type <b>diskpart</b> and then <b>list disk</b> as shown in the following image. You will get to know about the 'Partition Table Scheme' with star(*) mark. As in the image, my both drive are in <b>GPT</b> format.</p>
+          <img src="./images/step_2/00.png" alt="Image" width="70%">
+
+          <p>1. For Windows users, there are many applications to create a bootable USB. I used 'Rufus.exe' for this.</p>
+
+          <p>2. You can download it from <a href="https://rufus.ie/en/">here</a>.</p>
+          <p>3. After downloading it, double-click on 'rufus.exe to open. It will show a window like the one below.</p>
+          <img src="./images/step_2/01.png" alt="Image" width="70%">
+          <p>4. From the ‘Device’ dropdown menu, select the USB disk you want, if the program has not selected it.</p>
+          <p>5. Click on the ‘SELECT’ button to set the location for the ISO file.</p>
+          <p>6. Filesystem is recommended to set FAT32 (For NTFS you need to disable 'secure boot').</p>
+          <img src="./images/step_2/02.png" alt="Image" width="70%">
+          <p>7. No further change is required.</p>
+          <p>8. Click on the 'start' button. Now you can see the green progress bar.</p>
+          <img src="./images/step_2/03.png" alt="Image" width="70%">
+          <p>9. After completion click on the 'close' button.</p>
+        </div>
+
+        <div id="step-3-description">
+          <p>1. Restart the computer and enter the boot menu (keep pressing the boot menu key during the startup will bring you to the boot menu. ex: for an Asus laptop use 'esc', for an MSI mobo use 'F11', etc)</p>
+          <img src="./images/step_3/01.jpg" alt="Image" width="90%">
+          <p>Entering the boot menu, select the bootable USB partition.</p>
+          <p>2. Then you will find the following option.</p>
+          <img src="./images/step_3/02.jpg" alt="Image" width="90%">
+          <p>3. By selecting the 1st option, you can experience ClimBuntu OS without installation. For permanent installation, you need to select the 2nd option.</p>
+          <p>4. After a moment you will see the following pages.</p>
+          <img src="./images/step_3/03.jpg" alt="Image" width="90%">
+          <p>5. Set Username, Password, and other necessary credentials. Select Next</p>
+          <p>6. Now you have to make the partitions on your preferred disk and set their mount points.</p>
+          <img src="./images/step_3/04.jpg" alt="Image" width="90%">
+          <p>7. There are 3 mandatory partitions you need to create. EFI, Swap, and Root partition. Another partition Home is recommended.
+          <ul>
+            <li>For EFI 100MB is enough.</li>
+            <li>For SWAP, set equal to or higher than your RAM.</li>
+            <li>For Root, 20GB of minimum storage (or the rest of the storage if HOME partition is not added).</li>
+          </ul>
+          </p>
+          <img src="./images/step_3/05.jpg" alt="Image" width="90%">
+          <p>8. Now each partition needs to get a mount point. Click on the 100MB partition and from the Mount Point menu, select /boot/efi. Do the same for other partitions.</p>
+          <img src="./images/step_3/06.jpg" alt="Image" width="90%">
+          <p>9. Finally, click next and wait for the installation process to finish.</p>
+          <img src="./images/step_3/07.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_3/08.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_3/09.jpg" alt="Image" width="90%">
+
+        </div>
+
+        <div id="step-4-description">
+          <p>1. Now the pc will reboot. If you installed ClimBuntu Os on Dual Boot mood, you must set boot priorities from the BIOS menu before startup. Follow the images.</p>
+          <img src="./images/step_4/01.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_4/02.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_4/03.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_4/04.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_4/05.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_4/06.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_4/07.jpg" alt="Image" width="90%">
+        </div>
+
+        <div id="step-5-description">
+          <p>1. After finishing Reboot, you will enter in GRUB menu where the installed OS are listed.</p>
+          <p>2. If no key is pressed, it will automatically Boot into Ubuntu after 10 seconds. Or you can select manually Up/Down key and then press Enter.</p>
+          <img src="./images/step_5/01.jpg" alt="Image" width="90%">
+          <p></p>
+          <img src="./images/step_5/02.jpg" alt="Image" width="90%">
+          <p>3. In the terminal, type 'cd $MODEL' and 'ls' to find the pre-installed softwares.</p>
+          <img src="./images/step_5/03.jpg" alt="Image" width="90%">
+
+          <p>4. In the <b>FILE Manager</b>, you will also find the softwares as shortcut.</p>
+          <img src="./images/step_5/04.png" alt="Image" width="90%">
+
+          <p>5. If you find any error opening the folders from the home directory. Following commands will resolve the issue.
+          <ul>
+            <li>ln -s $MODEL/WRF WRF</li>
+            <li>ln -s $MODEL/miniconda3 miniconda3</li>
+            <li>ln -s $MODEL/MITgcm MITgcm</li>
+          </ul>
+          </p>
+          <img src="./images/step_5/05.png" alt="Image" width="90%">
+        </div>
+      </div>
+
+      <div id="navigation-buttons">
+        <button id="previous-button" class="nav-button previous-button" onclick="navigate(-1)" disabled>Previous</button>
+        <button id="next-button" class="nav-button next-button" onclick="navigate(1)">Next</button>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p> This tutorial is created by <b>Md. Tashin Ahammad</b></p>
+  </footer>
+
+  <div id="welcome-modal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to</h2>
+      <p>This tutorial will guide you through the step-by-step process of installing the operating system.</p>
+      <button id="start-button" onclick="showDescription(1)">Start</button>
+    </div>
+  </div>
+  <script>
+    // Get a reference to the button element by its ID
+    const backButton = document.getElementById("backButton");
+
+    // Add a click event listener to the button
+    backButton.addEventListener("click", function() {
+      // Use the window.history object to navigate back to the previous page
+      window.history.back();
+    });
+  </script>
+
+</body>
+</html>

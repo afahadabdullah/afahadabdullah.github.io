@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speedy.f90 Tutorial</title>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <meta name="viewport" content="width=1024">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Blog Python Tutorial | Abdullah Al Fahad, Ph.D. </title>
+  <meta name="author" content="Abdullah Al Fahad, Ph.D. ">
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. ">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <link rel="canonical" href="https://afahadabdullah.github.io/python/">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <!-- Unicons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+  <script src="/assets/js/theme.js"></script>
+  <script src="/assets/js/dark_mode.js"></script>
+  <!-- <link rel="stylesheet" href="style1.css" /> -->
+
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+            <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Abdullah Al Fahad, Ph.D. </span></a>
+              <span>| |</span>
+                <div class="nav-items"><div class="collapse navbar-collapse text-right" id="navbarNav navbar-item">
+                    <ul class="navbar-nav ml-auto flex-nowrap nav">
+                        <li class="nav-item "> <a class="nav-link" href="/">Home</a> </li>
+                        <li class="nav-item "> <a class="nav-link" href="/research/">Research</a> </li>
+                        <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a> </li>  
+                        <li class="nav-item "> <a class="nav-link" href="/climbuntu/">ClimBuntu</a> </li>
+
+                    </ul>
+                    
+                </div></div>
+            </div>
+    </header>
+  <main>
+    <div class="sidebar">
+      <ul id='steps'>
+        <li class="step" id="step-1" onclick="showDescription(1)">Speedy.f90</li>
+      </ul>
+      <div class="home-button"><button id="home-button" onclick="navigateHome()"><i class="fas fa-arrow-left"></i>Return to main menu</button></div>
+    </div>
+    <div id="description-box">
+      <div id="description-content">
+
+        <div id="step-1-description">
+          <h4>Tutorial: Running SPEEDY.f90 Atmospheric General Circulation Model</h4>
+  
+          <h5>Step 1: Initialization</h5>
+          <p>Begin by navigating to the SPEEDY.f90 directory using the command <code>cd $MODEL/speedy.f90</code>. Verify if the <strong>speedy</strong> executable exists in the <strong>/usr/bin/soft/speedy.f90/bin</strong> directory. If found, it indicates that the model is built and ready for execution. In such a case, return to the main SPEEDY.f90 directory by running <code>cd ..</code>.</p>
+          <img src="./images/1 speedy exe.jpg" alt="Image" width="90%"><br><br>
+          
+          <h5>Step 2: Configuration</h5>
+          <p>Open the <strong>namelist</strong> file to configure the model settings. The <strong>namelist</strong> file typically specifies runtime parameters such as the simulation duration. By default, the model is set to run for 10 days. You can adjust the simulation start date within the range of January 1, 1979, to December 1, 2013. After making the necessary adjustments, save the changes and exit the file.</p>
+          <img src="./images/2 namelist.jpg" alt="Image" width="90%"><br><br>
+          
+          <h5>Step 3: Execution</h5>
+          <p>Execute the model by running the <strong>run.sh</strong> script in the terminal using the command <code>bash run.sh</code>. The simulation will commence, and completion will be indicated shortly.</p>
+          <img src="./images/3 run.jpg" alt="Image" width="90%"><br><br>
+          <img src="./images/4 run end.jpg" alt="Image" width="90%"><br><br>
+
+          <h5>Step 4: Output Analysis</h5>
+          <p>Upon completion, a new directory named <strong>rundir</strong> will be created, containing all output data generated during the simulation. Navigate to the <strong>rundir</strong> directory (<code>cd rundir</code>) and list the files using the <code>ls</code> command. You will observe both the output files and input files represented as symbolic links. As the output files are typically in netCDF format, we refer to our previous tutorial on handling such files for further analysis.</p>
+          <img src="./images/5 output.jpg" alt="Image" width="90%"><br><br>
+
+        </div>
+
+        </div>
+        <div id="navigation-buttons">
+        <button id="previous-button" class="nav-button previous-button" onclick="navigate(-1)" disabled>Previous</button>
+        <button id="next-button" class="nav-button next-button" onclick="navigate(1)">Next</button>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p> This tutorial is created by <b>Md. Tashin Ahammad</b></p>
+  </footer>
+<!-- Use ESM syntax for all script blocks -->
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js';
+  import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js';
+
+  // Replace with your Firebase project's configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC2L31O2VtvaXWe-ktH77iMagARxdNqB88",
+    authDomain: "climpy-e9dab.firebaseapp.com",
+    projectId: "climpy-e9dab",
+    storageBucket: "climpy-e9dab.appspot.com",
+    messagingSenderId: "194247994975",
+    appId: "1:194247994975:web:422d737a1bd25c0a4335ea",
+    measurementId: "G-0R00GJTLX5"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  // Check authentication state on each page
+  onAuthStateChanged(getAuth(), function (user) {
+    if (user) {
+      // User is signed in, you can access user information like user.displayName, user.email, etc.
+      console.log("User is signed in");
+    } else {
+      // User is signed out
+      console.log("User is signed out");
+      alert("You must be logged in to access this tutorial.");
+      window.location.href = "../index.html";
+    }
+  });
+
+
+</script>
+</body>
+</html>

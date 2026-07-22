@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MITgcm Tutorial</title>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <meta name="viewport" content="width=1024">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Blog Python Tutorial | Abdullah Al Fahad, Ph.D. </title>
+  <meta name="author" content="Abdullah Al Fahad, Ph.D. ">
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. ">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <link rel="canonical" href="https://afahadabdullah.github.io/python/">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <!-- Unicons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+  <script src="/assets/js/theme.js"></script>
+  <script src="/assets/js/dark_mode.js"></script>
+  <!-- <link rel="stylesheet" href="style1.css" /> -->
+
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+            <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Abdullah Al Fahad, Ph.D. </span></a>
+              <span>| |</span>
+                <div class="nav-items"><div class="collapse navbar-collapse text-right" id="navbarNav navbar-item">
+                    <ul class="navbar-nav ml-auto flex-nowrap nav">
+                        <li class="nav-item "> <a class="nav-link" href="/">Home</a> </li>
+                        <li class="nav-item "> <a class="nav-link" href="/research/">Research</a> </li>
+                        <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a> </li>  
+                        <li class="nav-item "> <a class="nav-link" href="/climbuntu/">ClimBuntu</a> </li>
+
+                    </ul>
+                    
+                </div></div>
+            </div>
+    </header>
+  <main>
+    <div class="sidebar">
+      <ul id='steps'>
+        <li class="step" id="step-1" onclick="showDescription(1)">MITgcm</li>
+        <li class="step" id="step-2" onclick="showDescription(2)">Running MITgcm</li>
+      </ul>
+      <div class="home-button"><button id="home-button" onclick="navigateHome()"><i class="fas fa-arrow-left"></i>Return to main menu</button></div>
+    </div>
+    <div id="description-box">
+      <div id="description-content">
+
+        <div id="step-1-description">
+          <p><b>MITgcm</b>, which stands for <b>Massachusetts Institute of Technology General Circulation Model</b>, is a powerful numerical model used for simulating and understanding a wide range of oceanic processes. It is renowned for its versatility and high level of detail, making it a go-to tool for researchers studying ocean dynamics, climate variability, marine ecosystems, and more.</p>
+          <p>MITgcm plays a vital role in oceanography and climate research. Its ability to simulate complex phenomena such as ocean circulation, heat transport, sea ice dynamics, and biogeochemical cycles has made it an indispensable tool for scientists worldwide.</p>
+          <p>Setting up MITgcm could be a daunting task. However, now there's an easier option! <i><b>ClimBuntu OS</b></i> offers a streamlined solution. By installing <i><b>ClimBuntu OS</b></i>, you'll have MITgcm readily available on your device, eliminating the need for intricate setup procedures.</p>
+          <p><a href="https://afahadabdullah.github.io/climbuntu/"class="custom-link" target="_blank"> <b>Download ClimBuntu OS</b> </a></p>
+          <p><a href="../ClimBuntu_tutorial/index.html"class="custom-link" target="_blank"> <b>Install ClimBuntu OS</b> </a></p>
+        </div>
+
+
+        <div id="step-2-description">
+          <h4>Tutorial: Running the Global Ocean Project with MITgcm on Climbuntu</h4>
+
+          <p>This tutorial demonstrates the steps to execute the Global Ocean project utilizing MITgcm on Climbuntu. Given that MITgcm is preinstalled in Climbuntu, the focus lies on executing the project rather than on its compilation. Detailed documentation is available <a href="https://mitgcm.readthedocs.io/en/latest/">here</a>.</p>
+          <h5>Step 1: Download GRID_CS32.zip</h5>
+          <p>Begin by downloading the <a href="https://drive.google.com/uc?export=download&id=1_6PHlD-MQDZ5lYXQKFmR5t4Q_v_h9kG8">GRID_CS32.zip</a> file. This archive contains essential files that need to be incorporated into the input files of the Global Ocean project.</p>
+          <h5>Step 2: Unzip and Copy Files</h5>
+          <p>Once downloaded, unzip the GRID_CS32.zip file either through the file manager or by using the terminal command <code>unzip /path/GRID_CS32.zip</code>. After extraction, copy the unzipped files into the input folder within the Global Ocean project directory. This can be done manually via the file manager or through the terminal by navigating to the input directory (<code>cd $MODEL/MITgcm/verification/global_ocean/input</code>) and using the command <code>cp /path_to_GRID_CS32/* .</code>.</p>
+          <img src="./images/1 download grid_cs32.jpg" alt="Image" width="90%"><br><br>
+          <img src="./images/2 copy to input.jpg" alt="Image" width="90%"><br><br>
+          
+          <h5>Step 3: Create Soft Links</h5>
+          <p>Navigate to the run directory of the Global Ocean project (<code>cd $MODEL/MITgcm/verification/global_ocean/run</code>).</p>
+          <img src="./images/3 go to run dir.jpg" alt="Image" width="90%"><br><br>
+          <p>This directory is initially empty, proceed to create soft links of all files from the input folder to the current directory (<code>ln -s ../input/* .</code>).</p>
+          <img src="./images/4 link input files.jpg" alt="Image" width="90%"><br><br>
+          <h5>Step 4: Copy MITgcm Executable</h5>
+          <p>Copy the MITgcm executable file into the current directory using the command <code>cp ../build/mitgcmuv .</code>.</p>
+          <img src="./images/5 link mitgcmuv exe.jpg" alt="Image" width="90%"><br><br>
+          <h5>Step 5: Execute the Model</h5>
+          <p>Run the MITgcm model by executing the command <code>./mitgcmuv</code> in the terminal. Wait for the simulation to complete. A successful execution will conclude with the message "PROGRAM MAIN: Execution ended Normally."</p>
+          <img src="./images/6 run mitgcmuv.jpg" alt="Image" width="90%"><br><br>
+          <img src="./images/7 run finished.jpg" alt="Image" width="90%"><br><br>
+          <h5>Step 6: View Output</h5>
+          <p>After execution, use the <code>ls</code> command to view the output files with extensions .meta and .data.</p>
+          <img src="./images/8 dir file list.jpg" alt="Image" width="90%"><br><br>
+          <img src="./images/9 output files.jpg" alt="Image" width="90%"><br><br>
+          <h5>Step 7: Visualize Data with Python</h5>
+          <p>To visualize the output data, utilize Python. Launch Jupyter Notebook by typing <code>jupyter notebook</code> in the terminal. Jupyter Notebook comes preinstalled with Climbuntu, facilitating seamless data visualization.</p>
+          <p><a href="./MITgcm.html"class="custom-link" target="_blank">  <b>Visualization Tutorial</b> </a></p>
+          <p>By following these steps, you can successfully execute and visualize the Global Ocean project using MITgcm on Climbuntu.</p>
+
+        </div>
+
+        </div>
+        <div id="navigation-buttons">
+        <button id="previous-button" class="nav-button previous-button" onclick="navigate(-1)" disabled>Previous</button>
+        <button id="next-button" class="nav-button next-button" onclick="navigate(1)">Next</button>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p> This tutorial is created by <b>Md. Tashin Ahammad</b></p>
+  </footer>
+<!-- Use ESM syntax for all script blocks -->
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js';
+  import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js';
+
+  // Replace with your Firebase project's configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC2L31O2VtvaXWe-ktH77iMagARxdNqB88",
+    authDomain: "climpy-e9dab.firebaseapp.com",
+    projectId: "climpy-e9dab",
+    storageBucket: "climpy-e9dab.appspot.com",
+    messagingSenderId: "194247994975",
+    appId: "1:194247994975:web:422d737a1bd25c0a4335ea",
+    measurementId: "G-0R00GJTLX5"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  // Check authentication state on each page
+  onAuthStateChanged(getAuth(), function (user) {
+    if (user) {
+      // User is signed in, you can access user information like user.displayName, user.email, etc.
+      console.log("User is signed in");
+    } else {
+      // User is signed out
+      console.log("User is signed out");
+      alert("You must be logged in to access this tutorial.");
+      window.location.href = "../index.html";
+    }
+  });
+
+
+</script>
+</body>
+</html>
