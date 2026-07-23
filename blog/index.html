@@ -42,6 +42,7 @@
                         <li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/research/">R&amp;D</a> </li>
                         <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a> </li>
+                        <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fas fa-moon"></i> <i class="fas fa-sun"></i> </button> </li>
                         <li class="nav-button">
                             <div id='button'>
                                 <button type="button" class="button-40" id="form-open">Log in</button> 
@@ -487,6 +488,13 @@
 
 
     <script defer src="/assets/js/flowfield.js"></script>
+    <script>
+    (function(){
+      function sync(){document.body.classList.toggle('dark-mode', document.documentElement.getAttribute('data-theme')==='dark');}
+      if(document.readyState!=='loading') sync(); else document.addEventListener('DOMContentLoaded', sync);
+      new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+    })();
+    </script>
 </body>
 
 </html>

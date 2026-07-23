@@ -700,3 +700,93 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
 .pf-climbuntu-links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .pf-climbuntu-links .pf-btn { font-size: 0.85rem; padding: 0.5rem 1.1rem; }
 @media (max-width: 600px) { .pf-climbuntu-media { flex-basis: 100%; max-width: 260px; margin: 0 auto; } }
+
+/* ============================================================
+   v13: MOBILE navbar — readable dropdown, proper edge padding
+   ============================================================ */
+@media (max-width: 575px) {
+  /* let the bar grow when the menu opens; add side padding */
+  #navbar.navbar {
+    height: auto !important;
+    min-height: 56px !important;
+    display: block !important;
+  }
+  #navbar.navbar > .container {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    padding: 0.5rem 1rem !important;
+    height: auto !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #navbar.navbar .navbar-brand { font-size: 1.05rem !important; }
+  #navbar.navbar .navbar-toggler { margin-left: auto; }
+
+  /* the collapsible menu: solid background so links are readable */
+  #navbar.navbar .navbar-collapse {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 0.5rem;
+    background: var(--global-bg-color, #fff) !important;
+    border-top: 1px solid var(--global-divider-color);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 24px rgba(15, 30, 60, 0.14);
+    padding: 0.4rem 0.2rem 0.6rem;
+  }
+  #navbar.navbar .navbar-nav {
+    align-items: stretch !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+  }
+  #navbar.navbar .nav-item { display: block !important; width: 100% !important; margin: 0 !important; }
+  #navbar.navbar .nav-link {
+    display: block;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    padding: 0.7rem 0.9rem !important;
+    color: var(--global-text-color) !important;
+    border-radius: 8px;
+  }
+  #navbar.navbar .nav-link:hover { background: rgba(30, 100, 200, 0.08); }
+  #navbar.navbar .nav-item.active .nav-link { background: rgba(30, 100, 200, 0.10); }
+  /* blog login button full-width in the dropdown */
+  #navbar.navbar .nav-button { width: 100%; padding: 0.4rem 0.9rem; }
+  #navbar.navbar .nav-button #button { display: flex; }
+  #navbar.navbar .button-40 { width: 100%; }
+  /* keep page content clear of the (collapsed) bar */
+  body.fixed-top-nav { padding-top: 56px; }
+
+  /* prevent horizontal scroll on phones */
+  html, body { overflow-x: hidden !important; max-width: 100%; }
+  img, canvas, picture, video, iframe { max-width: 100%; height: auto; }
+  /* bootstrap row negative margins overflow when not in a padded container */
+  .intro-grid.row { margin-left: 0 !important; margin-right: 0 !important; }
+  .intro-grid.row > [class*="col-"] { padding-left: 0 !important; padding-right: 0 !important; }
+  .header-cover-photo { margin-left: 0 !important; margin-right: 0 !important; max-width: 100%; }
+}
+
+/* ============================================================
+   v14: hide sr-only labels; consistent theme-toggle button
+   ============================================================ */
+#navbar .sr-only, #navbar .navbar-toggler .sr-only {
+  position: absolute !important;
+  width: 1px !important; height: 1px !important;
+  padding: 0 !important; margin: -1px !important;
+  overflow: hidden !important; clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important; border: 0 !important;
+}
+#navbar .toggle-container { display: flex; align-items: center; }
+#navbar #light-toggle {
+  background: transparent !important;
+  border: none !important;
+  color: var(--global-text-color) !important;
+  cursor: pointer;
+  padding: 0.35rem 0.6rem !important;
+  font-size: 1rem;
+}
+#navbar #light-toggle:hover { color: var(--pf-accent) !important; }
