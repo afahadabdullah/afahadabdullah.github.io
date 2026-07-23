@@ -665,8 +665,8 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
    ============================================================ */
 #navbar.navbar { display: block !important; box-sizing: content-box !important; }
 
-/* research main hero: same height as home cover photo (~420px) */
-.pf-hero:not(.pf-hero-sm) {
+/* all page hero banners same height as home cover photo (420px) */
+.pf-hero {
   box-sizing: border-box !important;
   min-height: 420px !important;
   height: 420px !important;
