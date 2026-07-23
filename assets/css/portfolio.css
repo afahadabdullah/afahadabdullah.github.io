@@ -677,3 +677,26 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
 }
 .pf-hero:not(.pf-hero-sm) h1 { font-size: 2.2rem; margin-bottom: 0.7rem; }
 .pf-hero:not(.pf-hero-sm) .pf-tagline { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; max-width: 760px; margin-left: auto; margin-right: auto; }
+
+/* ============================================================
+   v12: ClimBuntu feature block inside the blog page
+   ============================================================ */
+.pf-climbuntu {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid var(--global-divider-color);
+  border-radius: var(--pf-radius);
+  background: var(--global-card-bg-color, var(--global-bg-color));
+  box-shadow: var(--pf-shadow);
+  padding: 1.4rem 1.6rem;
+  margin: 0 0 2rem;
+}
+.pf-climbuntu-media { flex: 0 0 200px; max-width: 200px; }
+.pf-climbuntu-media img { width: 100%; border-radius: 10px; display: block; }
+.pf-climbuntu-body { flex: 1 1 320px; }
+.pf-climbuntu-body p { font-size: 0.95rem; line-height: 1.65; margin-bottom: 1rem; color: var(--global-text-color); }
+.pf-climbuntu-links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.pf-climbuntu-links .pf-btn { font-size: 0.85rem; padding: 0.5rem 1.1rem; }
+@media (max-width: 600px) { .pf-climbuntu-media { flex-basis: 100%; max-width: 260px; margin: 0 auto; } }
