@@ -658,3 +658,22 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
 .profile-card a.pf-btn { margin-top: 0.6rem !important; }
 .profile-card .btn-cv:hover,
 .profile-card a.pf-btn:hover { color: #fff !important; transform: translateY(-2px); }
+
+/* ============================================================
+   v11: force identical navbar display model (blog set nav to
+   flex, shifting tabs) + match R&D banner height to home.
+   ============================================================ */
+#navbar.navbar { display: block !important; box-sizing: content-box !important; }
+
+/* research main hero: same height as home cover photo (~420px) */
+.pf-hero:not(.pf-hero-sm) {
+  box-sizing: border-box !important;
+  min-height: 420px !important;
+  height: 420px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem !important;
+}
+.pf-hero:not(.pf-hero-sm) h1 { font-size: 2.2rem; margin-bottom: 0.7rem; }
+.pf-hero:not(.pf-hero-sm) .pf-tagline { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; max-width: 760px; margin-left: auto; margin-right: auto; }
