@@ -511,3 +511,169 @@ body.fixed-top-nav { padding-top: 56px; }
 .pf-pillars-stack .pf-mini-pillar { margin-bottom: 0; }
 .pf-pillars-stack { display: grid; grid-template-columns: 1fr; gap: 0.8rem; }
 @media (min-width: 480px) and (max-width: 900px) { .pf-pillars-stack { grid-template-columns: 1fr 1fr; } }
+
+/* ============================================================
+   v4: uniform navbar height + shorter home + compact blog hero
+   ============================================================ */
+/* hard-lock the bar height on every page */
+#navbar.navbar { height: 56px !important; min-height: 56px; overflow: visible; }
+#navbar.navbar .container { height: 100%; display: flex; align-items: center; }
+#navbar.navbar .navbar-collapse { flex-grow: 1; }
+/* compact login button inside the bar (blog) */
+#navbar.navbar .button-40 {
+  padding: 4px 12px !important;
+  font-size: 0.82rem !important;
+  line-height: 1.4 !important;
+  border-radius: 999px;
+}
+@media (max-width: 575px) { #navbar.navbar { height: auto !important; } }
+
+/* tighter mini pillars → shorter home page */
+.pf-pillars-stack { gap: 0.55rem; }
+.pf-tworow .pf-mini-pillar { padding: 0.7rem 0.9rem; }
+.pf-tworow .pf-mini-pillar .pf-mini-icon { font-size: 1.05rem; margin-bottom: 0.2rem; }
+.pf-tworow .pf-mini-pillar h4 { font-size: 0.88rem; margin-bottom: 0.15rem; }
+.pf-tworow .pf-mini-pillar p { font-size: 0.76rem; line-height: 1.45; }
+.pf-tworow .pf-skillcat { padding: 0.75rem 0.9rem 0.5rem; }
+.pf-tworow .pf-skillgrid.pf-compact { gap: 0.55rem; }
+.pf-tworow .pf-cta-row { margin-top: 0.9rem; }
+.pf-tworow .pf-btn { font-size: 0.82rem; padding: 0.45rem 1.05rem; }
+
+/* extra-compact hero (blog) */
+.pf-hero-xs { padding: 1.9rem 1.4rem 1.7rem; }
+.pf-hero-xs h1 { font-size: 1.65rem; margin-bottom: 0.45rem; }
+.pf-hero-xs p.pf-tagline { font-size: 0.92rem; line-height: 1.55; margin-bottom: 0.8rem; }
+.pf-hero-xs .pf-chip { font-size: 0.68rem; padding: 0.24rem 0.65rem; }
+
+/* ============================================================
+   v5: print/tablet-resilient layout + FA icons + color harmony
+   ============================================================ */
+/* tworow collapses in step with bootstrap md columns */
+@media (max-width: 991px) { .pf-tworow { grid-template-columns: 1fr; } }
+@media (min-width: 480px) and (max-width: 991px) { .pf-pillars-stack { grid-template-columns: 1fr 1fr; } }
+
+/* FontAwesome icon styling for category headers & pillars */
+.pf-skillcat h4 .pf-skillcat-ico i { color: var(--pf-accent); font-size: 0.85rem; }
+.pf-mini-icon i { color: var(--pf-accent); font-size: 1.05rem; }
+.pf-card-icon i { font-size: 1.15rem; }
+
+/* View CV button + social circles: match the blue-teal accent, not al-folio purple */
+.btn-cv, a.btn-cv {
+  background: linear-gradient(90deg, var(--pf-accent), var(--pf-accent-2)) !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 999px !important;
+}
+.profile-card .social-link, .social-links .social-link {
+  color: var(--pf-accent) !important;
+  border-color: rgba(30, 100, 200, 0.35) !important;
+}
+.profile-card .social-link:hover, .social-links .social-link:hover {
+  background: var(--pf-accent) !important;
+  color: #fff !important;
+}
+
+/* ============================================================
+   v6: R&D dual theming — research (blue) vs development (teal)
+   ============================================================ */
+.pf-sec-research .pf-section-title { color: var(--pf-dyn); letter-spacing: 0.18em; }
+.pf-sec-research .pf-section-heading::after { background: linear-gradient(90deg, var(--pf-dyn), var(--pf-hyb)); }
+.pf-sec-research .pf-card { border-top: 3px solid rgba(59, 130, 246, 0.55); }
+
+.pf-sec-dev .pf-section-title { color: var(--pf-accent-2); letter-spacing: 0.18em; }
+.pf-sec-dev .pf-section-heading::after { background: linear-gradient(90deg, var(--pf-accent-2), var(--pf-ml)); }
+.pf-sec-dev .pf-card { border-top: 3px solid rgba(23, 179, 166, 0.55); }
+
+/* dual-identity chips in the hero */
+.pf-chip-research { background: rgba(59, 130, 246, 0.28); border-color: rgba(59, 130, 246, 0.6); }
+.pf-chip-dev { background: rgba(23, 179, 166, 0.28); border-color: rgba(23, 179, 166, 0.6); }
+
+/* ============================================================
+   v7: DETERMINISTIC navbar geometry — identical on every page,
+   neutralizes blog nav{padding} & climbuntu body insets.
+   ============================================================ */
+#navbar.navbar {
+  position: fixed !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  width: 100% !important;
+  height: 56px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1030;
+}
+#navbar.navbar > .container {
+  max-width: 1140px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 15px !important;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================================
+   v8: eliminate cross-page navbar shift caused by the vertical
+   scrollbar appearing on some pages and not others. Always
+   reserve the scrollbar gutter so centered layout never jumps.
+   ============================================================ */
+html { overflow-y: scroll; scrollbar-gutter: stable; }
+
+/* ============================================================
+   v9: force identical box model on the navbar container so the
+   bar aligns pixel-for-pixel on every page (blog's CSS was
+   making it border-box → 15px narrower/shifted).
+   ============================================================ */
+#navbar.navbar > .container {
+  box-sizing: content-box !important;
+  max-width: 1140px !important;
+  width: 100% !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ============================================================
+   v10: make "View CV" and "Explore R&D" identical stacked
+   buttons — same width, height, padding, centered text.
+   ============================================================ */
+.profile-card .btn-cv,
+.profile-card a.pf-btn {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  padding: 0.7rem 1.25rem !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.02em;
+  margin: 0 0 0 0 !important;
+  border: none !important;
+  color: #fff !important;
+  background: linear-gradient(90deg, var(--pf-accent), var(--pf-accent-2)) !important;
+}
+.profile-card a.pf-btn { margin-top: 0.6rem !important; }
+.profile-card .btn-cv:hover,
+.profile-card a.pf-btn:hover { color: #fff !important; transform: translateY(-2px); }
+
+/* ============================================================
+   v11: force identical navbar display model (blog set nav to
+   flex, shifting tabs) + match R&D banner height to home.
+   ============================================================ */
+#navbar.navbar { display: block !important; box-sizing: content-box !important; }
+
+/* research main hero: same height as home cover photo (~420px) */
+.pf-hero:not(.pf-hero-sm) {
+  box-sizing: border-box !important;
+  min-height: 420px !important;
+  height: 420px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem !important;
+}
+.pf-hero:not(.pf-hero-sm) h1 { font-size: 2.2rem; margin-bottom: 0.7rem; }
+.pf-hero:not(.pf-hero-sm) .pf-tagline { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; max-width: 760px; margin-left: auto; margin-right: auto; }
