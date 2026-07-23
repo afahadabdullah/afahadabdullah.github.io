@@ -669,11 +669,12 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
 .pf-hero {
   box-sizing: border-box !important;
   min-height: 420px !important;
-  height: 420px !important;
+  height: auto !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem !important;
+  padding: 2.5rem 2rem !important;
+  overflow: hidden;
 }
 .pf-hero:not(.pf-hero-sm) h1 { font-size: 2.2rem; margin-bottom: 0.7rem; }
 .pf-hero:not(.pf-hero-sm) .pf-tagline { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; max-width: 760px; margin-left: auto; margin-right: auto; }
@@ -850,4 +851,42 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
   .pf-tworow > div { display: flex; flex-direction: column; }
   .pf-tworow > div > .pf-pillars-stack,
   .pf-tworow > div > .pf-skillgrid { flex: 1 1 auto; align-content: space-between; }
+}
+
+/* ============================================================
+   v17: mobile hero — auto height so content never overflows/
+   overlaps the navbar (420px fixed only makes sense on desktop)
+   ============================================================ */
+@media (max-width: 575px) {
+  .pf-hero {
+    height: auto !important;
+    min-height: 240px !important;
+    padding: 1.6rem 1.2rem !important;
+    overflow: visible !important;
+  }
+  .pf-hero h1 { font-size: 1.55rem !important; line-height: 1.25; margin-bottom: 0.6rem; }
+  .pf-hero p.pf-tagline { font-size: 0.9rem !important; line-height: 1.5; margin-bottom: 0.85rem; }
+  .pf-hero .pf-chip { font-size: 0.66rem; padding: 0.22rem 0.6rem; }
+}
+
+/* ============================================================
+   v18: mobile menu open/close via .pf-open (jQuery-independent)
+   ============================================================ */
+@media (max-width: 575px) {
+  #navbar .navbar-collapse { display: none !important; }
+  #navbar .navbar-collapse.pf-open { display: block !important; }
+}
+@media (min-width: 576px) {
+  #navbar .navbar-collapse { display: flex !important; }
+}
+
+/* ============================================================
+   v19: consistent navbar font on every page (blog used a
+   different sans-serif stack than home/R&D)
+   ============================================================ */
+#navbar.navbar,
+#navbar.navbar .navbar-brand,
+#navbar.navbar .nav-link,
+#navbar.navbar .button-40 {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
 }
