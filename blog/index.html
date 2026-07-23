@@ -42,7 +42,6 @@
                         <li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/research/">R&amp;D</a> </li>
                         <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a> </li>
-                        <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fas fa-moon"></i> <i class="fas fa-sun"></i> </button> </li>
                         <li class="nav-button">
                             <div id='button'>
                                 <button type="button" class="button-40" id="form-open">Log in</button> 
@@ -286,81 +285,65 @@
 
     <!-- Section 5: Contributor Information -->
     <section id="section4">
-        <h2>Contributor Information</h2>
-        <div class="contributors">
-            <!-- Create contributor profiles -->
-            <!-- Assume there are 10 contributors, so create 2 rows of 5 contributors each -->
-            <div class="contributor">
-                <img src="./images/people/Abdullah Al Fahad.jpg" alt="Contributor 1">
-                <h3>Dr. Abdullah Al Fahad</h3>
-                <p><b>Project Lead</b></p>
-                <p><b>GMAO, NASA GSFC</b></p>
-                <p>Contact: <a href="mailto:a.fahad@nasa.gov">a.fahad@nasa.gov</a></p>
-            </div>
-
-            <div class="contributor">
-                <img src="./images/people/Tahmidul Azom Sany.jpeg" alt="Contributor 2">
-                <h3>Tahmidul Azom Sany</h3>
-                <p><b>George Mason University, VA, USA</b></p>
-                <p>Contact: <a href="mailto:tsany@gmu.edu">tsany@gmu.edu</a></p>
-            </div>
-
-            <div class="contributor">
-                <img src="./images/people/Nazimur Rashid Chowdhury.jpg" alt="Contributor 3">
-                <h3>Nazimur Rashid Chowdhury</h3>
-                <p><b>Earth System Physics, The Abdus Salam ICTP, Trieste, Italy</b></p>
-                <p>Contact: <a href="mailto:rashidnazimur@gmail.com">rashidnazimur@gmail.com</a></p>
-            </div>
-            
-            <div class="contributor">
-                <img src="./images/people/Md. Tashin Ahammad.jpg" alt="Contributor 4">
-                <h3>Md. Tashin Ahammad</h3>
-                <p><b>Dept. of Physics, SUST, Sylhet-3114</b></p>
-                <p>Contact: <a href="mailto:tashinahammad.03@gmail.com">tashinahammad.03@gmail.com</a></p>
-            </div>
-
-            <div class="contributor">
-                <img src="./images/people/Torikul Islam Sanjid.jpg" alt="Contributor 5">
-                <h3>Torikul Islam Sanjid </h3>
-                <p><b>Dept. of Physics, SUST, Sylhet-3114</b></p>
-                <p>Contact: <a href="mailto:torikul.sanjid@gmail.com">torikul.sanjid@gmail.com</a></p>
-            </div>
-
-            <div class="contributor">
-                <img src="./images/people/Rifat Rahman Bhuiyan.jpg" alt="Contributor 6">
-                <h3>Rifat Rahman Bhuiyan</h3>
-                <p><b>Dept. of Physics, SUST, Sylhet-3114</b></p>
-                <p>Contact: <a href="mailto:rifatb00@gmail.com">rifatb00@gmail.com</a></p>
-            </div>
-
-            <div class="contributor">
-                <img src="./images/people/Shammunul Islam.jpg" alt="Contributor 7">
-                <h3>Shammunul Islam</h3>
-                <p><b>AOES, George Mason University, VA, USA</b></p>
-                <p>Contact: <a href="mailto:sislam27@gmu.edu">sislam27@gmu.edu</a></p>
-            </div>
-
-            <div class="contributor">
-                <img src="./images/people/Md Aminul Haque Laskor.jpg" alt="Contributor 8">
-                <h3>Md Aminul Haque Laskor</h3>
-                <p><b>Dept. of Geography, SUST, Sylhet-3114</b></p>
-                <p>Contact: <a href="mailto:ahl.aminlaskor@gmail.com">ahl.aminlaskor@gmail.com</a></p>
-            </div>
-
-            <div class="contributor">
-                <img src="./images/people/Saiful Islam Apu.jpeg" alt="Contributor 9">
-                <h3>Saiful Islam Apu</h3>
-                <p><b>Department of Geology, The University of Kansas, Lawrence, KS, 66045</b></p>
-                <p>Contact: <a href="mailto:saifulapu@ku.edu">saifulapu@ku.edu</a></p>
-            </div>
-
-            <div class="contributor">
-                <img src="./images/people/Noshin Sharmili.jpg" alt="Contributor 10">
-                <h3>Noshin Sharmili</h3>
-                <p><b>Geosciences, Pennsylvania State University, PA, USA</b></p>
-                <p>Contact: <a href="mailto:noshinsharmili0@gmail.com">noshinsharmili0@gmail.com</a></p>
-            </div>
-        </div>
+        <details class="pf-contrib">
+            <summary>
+                <span class="pf-contrib-title">Contributors</span>
+                <span class="pf-contrib-count">10</span>
+                <span class="pf-contrib-chevron" aria-hidden="true">&#9656;</span>
+            </summary>
+            <ul class="pf-contrib-list">
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Dr. Abdullah Al Fahad</span>
+                    <span class="pf-contrib-aff">Project Lead · GMAO, NASA GSFC</span>
+                    <a class="pf-contrib-mail" href="mailto:a.fahad@nasa.gov">a.fahad@nasa.gov</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Tahmidul Azom Sany</span>
+                    <span class="pf-contrib-aff">George Mason University, VA, USA</span>
+                    <a class="pf-contrib-mail" href="mailto:tsany@gmu.edu">tsany@gmu.edu</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Nazimur Rashid Chowdhury</span>
+                    <span class="pf-contrib-aff">Earth System Physics, The Abdus Salam ICTP, Trieste, Italy</span>
+                    <a class="pf-contrib-mail" href="mailto:rashidnazimur@gmail.com">rashidnazimur@gmail.com</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Md. Tashin Ahammad</span>
+                    <span class="pf-contrib-aff">Dept. of Physics, SUST, Sylhet-3114</span>
+                    <a class="pf-contrib-mail" href="mailto:tashinahammad.03@gmail.com">tashinahammad.03@gmail.com</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Torikul Islam Sanjid</span>
+                    <span class="pf-contrib-aff">Dept. of Physics, SUST, Sylhet-3114</span>
+                    <a class="pf-contrib-mail" href="mailto:torikul.sanjid@gmail.com">torikul.sanjid@gmail.com</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Rifat Rahman Bhuiyan</span>
+                    <span class="pf-contrib-aff">Dept. of Physics, SUST, Sylhet-3114</span>
+                    <a class="pf-contrib-mail" href="mailto:rifatb00@gmail.com">rifatb00@gmail.com</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Shammunul Islam</span>
+                    <span class="pf-contrib-aff">AOES, George Mason University, VA, USA</span>
+                    <a class="pf-contrib-mail" href="mailto:sislam27@gmu.edu">sislam27@gmu.edu</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Md Aminul Haque Laskor</span>
+                    <span class="pf-contrib-aff">Dept. of Geography, SUST, Sylhet-3114</span>
+                    <a class="pf-contrib-mail" href="mailto:ahl.aminlaskor@gmail.com">ahl.aminlaskor@gmail.com</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Saiful Islam Apu</span>
+                    <span class="pf-contrib-aff">Department of Geology, The University of Kansas, Lawrence, KS, 66045</span>
+                    <a class="pf-contrib-mail" href="mailto:saifulapu@ku.edu">saifulapu@ku.edu</a>
+                </li>
+                <li class="pf-contrib-item">
+                    <span class="pf-contrib-name">Noshin Sharmili</span>
+                    <span class="pf-contrib-aff">Geosciences, Pennsylvania State University, PA, USA</span>
+                    <a class="pf-contrib-mail" href="mailto:noshinsharmili0@gmail.com">noshinsharmili0@gmail.com</a>
+                </li>
+            </ul>
+        </details>
     </section>
     <div  class="home">
       <div class="form_container">

@@ -790,3 +790,64 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
   font-size: 1rem;
 }
 #navbar #light-toggle:hover { color: var(--pf-accent) !important; }
+
+/* ============================================================
+   v15: collapsible contributors (no photos)
+   ============================================================ */
+.pf-contrib {
+  border: 1px solid var(--global-divider-color);
+  border-radius: var(--pf-radius);
+  background: var(--global-card-bg-color, var(--global-bg-color));
+  box-shadow: var(--pf-shadow);
+  overflow: hidden;
+  margin: 1rem 0 2rem;
+}
+.pf-contrib > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  user-select: none;
+}
+.pf-contrib > summary::-webkit-details-marker { display: none; }
+.pf-contrib-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, var(--pf-accent), var(--pf-accent-2));
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+}
+.pf-contrib-chevron { margin-left: auto; transition: transform 0.2s ease; color: var(--pf-accent); }
+.pf-contrib[open] .pf-contrib-chevron { transform: rotate(90deg); }
+.pf-contrib-list { list-style: none; margin: 0; padding: 0 0.6rem 0.6rem; }
+.pf-contrib-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.75rem 0.8rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+.pf-contrib-name { font-weight: 700; color: var(--global-text-color); }
+.pf-contrib-aff { font-size: 0.88rem; opacity: 0.8; color: var(--global-text-color); }
+.pf-contrib-mail { font-size: 0.85rem; color: var(--pf-accent); font-weight: 600; text-decoration: none; }
+.pf-contrib-mail:hover { text-decoration: underline; }
+
+/* ensure collapsed details actually hides the list (page CSS overrides UA default) */
+.pf-contrib:not([open]) .pf-contrib-list { display: none !important; }
+.pf-contrib[open] .pf-contrib-list { display: block !important; }
+
+/* ============================================================
+   v16: equal-height Skills & R&D columns (desktop side-by-side)
+   ============================================================ */
+@media (min-width: 992px) {
+  .pf-tworow { align-items: stretch !important; }
+  .pf-tworow > div { display: flex; flex-direction: column; }
+  .pf-tworow > div > .pf-pillars-stack,
+  .pf-tworow > div > .pf-skillgrid { flex: 1 1 auto; align-content: space-between; }
+}
