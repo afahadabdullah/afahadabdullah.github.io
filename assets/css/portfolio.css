@@ -890,3 +890,35 @@ html { overflow-y: scroll; scrollbar-gutter: stable; }
 #navbar.navbar .button-40 {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
 }
+
+/* ---------- uniform, expandable card text ---------- */
+.pf-card p.pf-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+.pf-card p.pf-clamp.is-open {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+.pf-card p.pf-clamp.pf-clamp-fits { margin-bottom: 0.8rem; }
+.pf-card-more {
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0 0 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--pf-accent);
+  cursor: pointer;
+}
+.pf-card-more:hover { text-decoration: underline; }
+.pf-card-links.pf-card-links-top {
+  margin-top: 0.5rem;
+  margin-bottom: 0.15rem;
+}
