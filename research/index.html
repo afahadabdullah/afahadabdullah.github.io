@@ -47,8 +47,8 @@
                     <h1>Research &amp; Development</h1>
                     <p class="pf-tagline">From the Navier–Stokes equations to generative neural networks — coupled dynamical models, data assimilation, and physics-ML, developed into operational products for climate-risk decisions.</p>
                     <div class="pf-hero-chips">
+                        <span class="pf-chip pf-chip-dev">Development: forecast products</span>
                         <span class="pf-chip pf-chip-research">Research: Earth-system science</span>
-                        <span class="pf-chip pf-chip-dev">Development: operational products</span>
                         <span class="pf-chip">Dynamical Modeling</span>
                         <span class="pf-chip">Data Assimilation</span>
                         <span class="pf-chip">Physics-ML &amp; Generative AI</span>
@@ -76,58 +76,26 @@
 
 
 
-            <!-- ======================= FEATURED PROJECTS ======================= -->
-            <section class="pf-section pf-sec-research" id="projects">
-                <p class="pf-section-title">Science</p>
-                <h2 class="pf-section-heading">Research highlights</h2>
-                <div class="pf-grid pf-grid-2">
-
-                    <div class="pf-card">
-                        <div><span class="pf-tag pf-tag-dyn">Dynamical · OSSE</span></div>
-                        <h3>Global Kilometer-Scale GEOS/ECCO Nature Run</h3>
-                        <p>Co-developed and executed a global coupled atmosphere–ocean simulation at kilometer scale (C1440-LLC2160) — a digital-twin "truth" dataset for satellite observing-system simulation experiments, pre-launch sensor evaluation, and extreme-event reconstruction, produced on petabyte-scale HPC.</p>
-                        <div><span class="pf-metric">Scientific Data (2026)</span><span class="pf-metric">GRL (2022)</span></div>
-                        <div class="pf-card-links"><a href="https://doi.org/10.1029/2021GL097003" target="_blank" rel="noopener">Air–sea paper</a></div>
-                    </div>
-
-                    <div class="pf-card">
-                        <div><span class="pf-tag pf-tag-dyn">Dynamical · Coupled Modeling</span></div>
-                        <h3>GEOS-MITgcm NWP-to-Decadal Prediction System</h3>
-                        <p>Co-led development of NASA's modular coupled prediction system spanning weather to decadal horizons: Fortran/MPI coupling architecture, dynamically balanced initialization, adjoint data assimilation, and legacy-kernel optimization for 30% higher HPC throughput.</p>
-                        <div><span class="pf-metric">+30% throughput</span><span class="pf-metric">J. Climate (in review)</span></div>
-                        <div class="pf-card-links"><a href="https://github.com/afahadabdullah/gmao_mitgcm_couplng" target="_blank" rel="noopener">GitHub</a></div>
-                    </div>
-
-                    <div class="pf-card">
-                        <div><span class="pf-tag pf-tag-hyb">Hybrid Physics-ML</span></div>
-                        <h3>Green's-Function, Adjoint &amp; Bayesian Parameter Optimization</h3>
-                        <p>Two physically interpretable strategies for tuning Earth-system models: Green's-function response maps with Gaussian-process multi-fidelity search, and ocean-adjoint gradients transferred into coupled GEOS-MITgcm experiments.</p>
-                        <div><span class="pf-metric">−75% calibration cost</span><span class="pf-metric">10× throughput</span><span class="pf-metric">+40% accuracy</span></div>
-                        <div class="pf-card-links"><a href="https://github.com/afahadabdullah/ML_tuningQG" target="_blank" rel="noopener">GitHub</a></div>
-                    </div>
-
-                    <div class="pf-card">
-                        <div><span class="pf-tag pf-tag-hyb">Hybrid Physics-ML · NASA PI</span></div>
-                        <h3>NOAA FIM Model Bias Correction for Extreme Monsoon Forecasts</h3>
-                        <p>Principal Investigator of a NASA-funded project correcting a persistent systematic error in NOAA's FIM model to improve forecasts of extreme South Asian monsoon precipitation — combining tendency-error diagnosis, explainable AI, and generative bias correction.</p>
-                        <div><span class="pf-metric">NASA GMAO Core (2026)</span><span class="pf-metric">CRPS · RMSE · ACC verified</span></div>
-                    </div>
-
-                    <div class="pf-card">
-                        <div><span class="pf-tag pf-tag-risk">Hazard Science</span><span class="pf-tag pf-tag-dyn">Dynamical</span></div>
-                        <h3>Monsoon Extremes &amp; Bay of Bengal Tropical Cyclones</h3>
-                        <p>A connected research program on flood-producing monsoon rainfall and the environmental drivers of Bay of Bengal cyclones under climate change — including the finding that climate change quadruples flood-causing extreme monsoon events in Bangladesh and Northeast India.</p>
-                        <div><span class="pf-metric">4× extreme events (QJRMS 2024)</span><span class="pf-metric">J. Climate (2023)</span></div>
-                        <div class="pf-card-links"><a href="https://doi.org/10.1002/qj.4645" target="_blank" rel="noopener">QJRMS 2024</a><a href="https://doi.org/10.1175/JCLI-D-22-0804.1" target="_blank" rel="noopener">J. Climate 2023</a></div>
-                    </div>
-
-                </div>
-            </section>
-
             <section class="pf-section pf-sec-dev" id="development">
                 <p class="pf-section-title">Research → Operations</p>
                 <h2 class="pf-section-heading">Development &amp; products</h2>
                 <div class="pf-grid pf-grid-2">
+
+                    <div class="pf-card">
+                        <div><span class="pf-tag pf-tag-risk">Climate Risk · Operations</span><span class="pf-tag pf-tag-ml">Probabilistic ML</span></div>
+                        <h3>Weather2Grid: Probabilistic Weather-to-Power-Outage Risk</h3>
+                        <p>An open hierarchical risk system that turns official NHC, numerical, and AI weather forecasts into calibrated county-level power-outage distributions for emergency managers on a 24–96 hour planning horizon. A common calibrated gust interface lets heterogeneous hazard sources (HRRR, GEFS, ECMWF/AIFS, WeatherNext) feed one two-stage vulnerability model trained against the EAGLE-I outage record, so tropical cyclones, derechos, and high-wind events share a single framework. Products report P50/P90 severity, exceedance probabilities, cost–loss decision thresholds, and an explicit split between meteorological and impact-model uncertainty — currently running as a live experimental forecast with leakage-proof replay verification.</p>
+                        <div><span class="pf-metric">County-level CONUS</span><span class="pf-metric">24–96 h lead</span><span class="pf-metric">Weather vs. impact uncertainty split</span><span class="pf-metric">Live forecast (experimental)</span></div>
+                        <div class="pf-card-links"><a href="https://afahadabdullah.github.io/weather2grid/" target="_blank" rel="noopener">Live dashboard</a><a href="https://github.com/afahadabdullah/stormgrid" target="_blank" rel="noopener">GitHub</a></div>
+                    </div>
+
+                    <div class="pf-card">
+                        <div><span class="pf-tag pf-tag-ml">ML · Generative</span><span class="pf-tag pf-tag-hyb">Data Assimilation</span></div>
+                        <h3>SURMA-Flow &amp; BRISHTI-05: Generative High-Resolution Rainfall Analysis</h3>
+                        <p>SURMA-Flow (Score-guided Unified Rainfall Modeling and Assimilation with Rectified Flow) learns fine-scale precipitation structure from CPC, ERA5, and CHIRPS, then assimilates BMD rain-gauge and GPM IMERG satellite observations at analysis time through score guidance — producing a stochastic ensemble rather than a deterministic interpolation. Its first public product, BRISHTI-05, is a 30-member daily precipitation reanalysis over Bangladesh on a 0.05° (~5 km) grid, validated on rotated spatial holdout folds of withheld BMD stations with correlated-footprint treatment of satellite error.</p>
+                        <div><span class="pf-metric">0.05° (~5 km) Bangladesh</span><span class="pf-metric">30-member ensemble</span><span class="pf-metric">Held-out BMD station folds</span></div>
+                        <div class="pf-card-links"><a href="https://github.com/afahadabdullah/BDhighresDA" target="_blank" rel="noopener">GitHub</a></div>
+                    </div>
 
                     <div class="pf-card">
                         <div><span class="pf-tag pf-tag-hyb">Hybrid Physics-ML</span></div>
@@ -165,6 +133,54 @@
                         <p>AOESpy (Python climate-analysis library), ClimBuntu (a preconfigured Linux environment for climate research), and an open Climate Data Science &amp; Modeling curriculum — used internationally and for mentoring 5+ students and interns.</p>
                         <div><span class="pf-metric">Used internationally</span><span class="pf-metric">5+ mentees</span></div>
                         <div class="pf-card-links"><a href="https://github.com/afahadabdullah/AOESpy" target="_blank" rel="noopener">AOESpy</a><a href="/climbuntu/">ClimBuntu</a><a href="/blog/">Curriculum</a></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ======================= FEATURED PROJECTS ======================= -->
+            <section class="pf-section pf-sec-research" id="projects">
+                <p class="pf-section-title">Science</p>
+                <h2 class="pf-section-heading">Research highlights</h2>
+                <div class="pf-grid pf-grid-2">
+
+                    <div class="pf-card">
+                        <div><span class="pf-tag pf-tag-dyn">Dynamical · OSSE</span></div>
+                        <h3>Global Kilometer-Scale GEOS/ECCO Nature Run</h3>
+                        <p>Co-developed and executed a global coupled atmosphere–ocean simulation at kilometer scale (C1440-LLC2160) — a digital-twin "truth" dataset for satellite observing-system simulation experiments, pre-launch sensor evaluation, and extreme-event reconstruction, produced on petabyte-scale HPC.</p>
+                        <div><span class="pf-metric">Scientific Data (2026)</span><span class="pf-metric">GRL (2022)</span></div>
+                        <div class="pf-card-links"><a href="https://doi.org/10.1029/2021GL097003" target="_blank" rel="noopener">Air–sea paper</a></div>
+                    </div>
+
+                    <div class="pf-card">
+                        <div><span class="pf-tag pf-tag-dyn">Dynamical · Coupled Modeling</span></div>
+                        <h3>GEOS-MITgcm NWP-to-Decadal Prediction System</h3>
+                        <p>Co-led development of NASA's modular coupled prediction system spanning weather to decadal horizons: Fortran/MPI coupling architecture, dynamically balanced initialization, adjoint data assimilation, and legacy-kernel optimization for 30% higher HPC throughput.</p>
+                        <div><span class="pf-metric">+30% throughput</span><span class="pf-metric">J. Climate (in review)</span></div>
+                        <div class="pf-card-links"><a href="https://github.com/afahadabdullah/gmao_mitgcm_couplng" target="_blank" rel="noopener">GitHub</a></div>
+                    </div>
+
+                    <div class="pf-card">
+                        <div><span class="pf-tag pf-tag-hyb">Hybrid Physics-ML</span></div>
+                        <h3>Green's-Function, Adjoint &amp; Bayesian Parameter Optimization</h3>
+                        <p>Two physically interpretable strategies for tuning Earth-system models: Green's-function response maps with Gaussian-process multi-fidelity search, and ocean-adjoint gradients transferred into coupled GEOS-MITgcm experiments.</p>
+                        <div><span class="pf-metric">−75% calibration cost</span><span class="pf-metric">10× throughput</span><span class="pf-metric">+40% accuracy</span></div>
+                        <div class="pf-card-links"><a href="https://github.com/afahadabdullah/ML_tuningQG" target="_blank" rel="noopener">GitHub</a></div>
+                    </div>
+
+                    <div class="pf-card">
+                        <div><span class="pf-tag pf-tag-hyb">Hybrid Physics-ML · NASA PI</span></div>
+                        <h3>NASA GEOS Model Bias Correction for Extreme Monsoon Forecasts</h3>
+                        <p>Principal Investigator of a NASA-funded project correcting a persistent systematic error in NASA's GEOS model to improve forecasts of extreme South Asian monsoon precipitation — combining tendency-error diagnosis, explainable AI, and generative bias correction.</p>
+                        <div><span class="pf-metric">NASA GMAO Core (2026)</span><span class="pf-metric">CRPS · RMSE · ACC verified</span></div>
+                    </div>
+
+                    <div class="pf-card">
+                        <div><span class="pf-tag pf-tag-risk">Hazard Science</span><span class="pf-tag pf-tag-dyn">Dynamical</span></div>
+                        <h3>Monsoon Extremes &amp; Bay of Bengal Tropical Cyclones</h3>
+                        <p>A connected research program on flood-producing monsoon rainfall and the environmental drivers of Bay of Bengal cyclones under climate change — including the finding that climate change quadruples flood-causing extreme monsoon events in Bangladesh and Northeast India.</p>
+                        <div><span class="pf-metric">4× extreme events (QJRMS 2024)</span><span class="pf-metric">J. Climate (2023)</span></div>
+                        <div class="pf-card-links"><a href="https://doi.org/10.1002/qj.4645" target="_blank" rel="noopener">QJRMS 2024</a><a href="https://doi.org/10.1175/JCLI-D-22-0804.1" target="_blank" rel="noopener">J. Climate 2023</a></div>
                     </div>
 
                 </div>
@@ -248,8 +264,8 @@
         { pos: 30, type: "hyb", title: "Adjoint & Green's-Function Parameter Optimization",
           desc: "Physically interpretable model tuning: Green's-function response maps and ocean-adjoint gradients steer a Gaussian-process Bayesian search. 75% cheaper calibration, 10× throughput, +40% accuracy.",
           link: "#projects" },
-        { pos: 46, type: "hyb", title: "NOAA FIM Bias Correction for Monsoon Extremes (NASA PI)",
-          desc: "NASA-funded PI project: explainable AI diagnoses a persistent systematic error in NOAA's FIM model, and generative post-processing corrects extreme South Asian monsoon precipitation forecasts.",
+        { pos: 46, type: "hyb", title: "NASA GEOS Bias Correction for Monsoon Extremes (NASA PI)",
+          desc: "NASA-funded PI project: explainable AI diagnoses a persistent systematic error in NASA's GEOS model, and generative post-processing corrects extreme South Asian monsoon precipitation forecasts.",
           link: "#projects" },
         { pos: 62, type: "hyb", title: "Dynamical-AI Kilometer-Scale Downscaling",
           desc: "WRF physics + diffusion/flow-matching models downscale global reanalysis to 3-km and site-specific wind, solar, and flood products — ~1000× faster than dynamical workflows.",
